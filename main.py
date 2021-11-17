@@ -47,14 +47,7 @@ and use shopping_list['New Store'] = new_list !
 
 # A shopping list will have a name
 
-# A user should be able to select a shopping list and then
 
-# add items
-
-# delete items
-
-# view all items
-# A user should be able to delete a shopping list
 
 
 from create_new_list import create_new_list
@@ -72,6 +65,11 @@ q - Quit"""
 valid_input = ['1', '2', '3', 'q']
 shopping_list = {'Fiesta' : ['Milk', 'Soda', 'Fish'], 'Walmart' : ['Paper', 'Napkins', 'Plate', 'Chips'], 'Sams Club' : ['Chicken', 'Beef', 'Eggs', 'Sugar', 'Salt', 'Pepper', 'Honey']}
 
+# A function just to check if user input is valid
+# this allows me to update my menu without re-doing a bunch of code
+# next idea: some way of creating a dynamic menu. maybe a list of function calls
+# which would be referenced by (i+1).... or a dictionary! 
+# ie {1 : []}
 def is_valid(user_input):
     if user_input in valid_input:
         return True
@@ -100,8 +98,4 @@ def main():
             main()
 main()
         
-# A function just to check if user input is valid
-# this allows me to update my menu without re-doing a bunch of code
-# next idea: some way of creating a dynamic menu. maybe a list of function calls
-# which would be referenced by (i+1).... or a dictionary! oh shit
-# ie {1 : []}
+
